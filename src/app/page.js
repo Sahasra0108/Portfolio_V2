@@ -1,18 +1,19 @@
-'use client'
-
-import React, { useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { NavBar } from "../components/NavBar";
-import { Banner } from "../components/Banner";
-import { Skills } from "../components/Skills";
-import { Experience } from "../components/experience";
-import { Projects } from "../components/Projects";
-import { Contact } from "../components/Contact";
-import { About } from "../components/About";
-import { Education } from "../components/Education";
-import { Hackathons } from "../components/Hackathons";
+'use client' 
+import dynamic from 'next/dynamic';
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useEffect } from 'react';
+
+const NavBar = dynamic(() => import('../components/NavBar').then(m => m.NavBar), { ssr: false });
+const Banner = dynamic(() => import('../components/Banner').then(m => m.Banner), { ssr: false });
+const About = dynamic(() => import('../components/About').then(m => m.About), { ssr: false });
+const Skills = dynamic(() => import('../components/Skills').then(m => m.Skills), { ssr: false });
+const Experience = dynamic(() => import('../components/experience').then(m => m.Experience), { ssr: false });
+const Projects = dynamic(() => import('../components/Projects').then(m => m.Projects), { ssr: false });
+const OpenSource = dynamic(() => import('../components/OpenSource').then(m => m.OpenSource), { ssr: false });
+const Education = dynamic(() => import('../components/Education').then(m => m.Education), { ssr: false });
+const Hackathons = dynamic(() => import('../components/Hackathons').then(m => m.Hackathons), { ssr: false });
+const Contact = dynamic(() => import('../components/Contact').then(m => m.Contact), { ssr: false });
 
 export default function Home() {
   useEffect(() => {
@@ -22,11 +23,12 @@ export default function Home() {
   return (
     <div className="App">
       <NavBar />
-      <Banner />
+       <Banner />
       <About />
       <Skills />
-      <Experience />
+      <Experience />  
       <Projects />
+      <OpenSource/>
       <Education />
       <Hackathons />
       <Contact />

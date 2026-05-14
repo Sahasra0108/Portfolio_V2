@@ -1,3 +1,4 @@
+'use client'
 import { useState, useEffect } from "react";
 import { Col, Row, Alert } from "react-bootstrap";
 

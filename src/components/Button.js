@@ -1,3 +1,4 @@
+'use client'
 import { Button } from 'react-bootstrap';
 import "./styles.css";
 

@@ -1,3 +1,4 @@
+'use client'
 import { Container, Row, Col, Button } from "react-bootstrap";
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -11,6 +12,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaGithub, FaExternalLinkAlt, FaMobileAlt } from 'react-icons/fa';
 import { MdArrowForward, MdClose } from 'react-icons/md';
+import Image from "next/image"
 
 export const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
@@ -39,7 +41,7 @@ Client: Rootcode Labs`,
         mobile: "https://github.com/Sahasra0108/centralSyncMobileApp.git"
       },
       //live: "https://centralsync-demo.com",
-      technologies: ["React", "React Native", "Spring Boot", "MySQL", "REST API", "JWT"],
+      technologies: ["React", "React Native", "Spring Boot", "MySQL"],
       category: "fullstack",
       client: "Rootcode Labs"
     },
@@ -66,7 +68,7 @@ Features:
     },
     {
       id: 3,
-      title: "Machine Vision-Based Ayurvedic Plant Identification and Health Assessment",
+      title: "Morphologically Similar Ayurvedic Plant Identification and Health Assessment ",
       shortDesc: "Research-based mobile app for Ayurvedic plant identification",
       description: `A research-based mobile application designed to automate the identification and health assessment of morphologically similar Ayurvedic medicinal plants in Sri Lanka using machine vision.
 
@@ -81,7 +83,7 @@ Key Contributions:
       //   backend: "https://github.com/ashanmwick/ayurvedic-plant-api"
       // },
       live: "https://ayurvedic-plant-demo.com",
-      technologies: ["Python", "Computer Vision"],
+      technologies: ["Python", "OpenCV", "Flutter", "FastAPI"],
       category: "fullstack"
     },
     {
@@ -160,7 +162,7 @@ Key Contributions:
   };
 
   return (
-    <div className="projects-section" style={{ 
+    <div className="projects-section" style={{
       background: 'linear-gradient(135deg, #0a0a2a 0%, #1a1a3a 100%)',
       position: 'relative',
       overflow: 'hidden',
@@ -168,152 +170,147 @@ Key Contributions:
     }}>
       <Container>
         <section className="" id="projects">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          style={{ textAlign: 'center', marginBottom: '60px' }}
-        >
-          <h2 style={{
-            fontSize: '3rem',
-            fontWeight: 'bold',
-            background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)',
-            WebkitBackgroundClip: 'text',
-            WebkitTextFillColor: 'transparent',
-            marginBottom: '20px'
-          }}>
-            Featured Projects
-          </h2>
-          <p style={{
-            fontSize: '1.2rem',
-            color: '#c4b5fd',
-            maxWidth: '600px',
-            margin: '0 auto',
-            opacity: 0.9
-          }}>
-            Innovative solutions spanning web, mobile, and IoT technologies
-          </p>
-        </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            style={{ textAlign: 'center', marginBottom: '60px' }}
+          >
+            <h2 style={{
+              fontSize: '3rem',
+              fontWeight: 'bold',
+              background: 'linear-gradient(135deg, #a855f7 0%, #7c3aed 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              marginBottom: '20px'
+            }}>
+              Featured Projects
+            </h2>
+            <p style={{
+              fontSize: '1.2rem',
+              color: '#c4b5fd',
+              maxWidth: '600px',
+              margin: '0 auto',
+              opacity: 0.9
+            }}>
+              Innovative solutions spanning web, mobile, and IoT technologies
+            </p>
+          </motion.div>
 
-        {/* Projects Grid - All Full Width */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {projects.map((project, index) => (
-            <div key={project.id} style={{ marginBottom: '60px' }}>
-              <motion.div
-                variants={cardVariants}
-                whileHover="hover"
-                style={{
-                  background: 'rgba(30, 30, 50, 0.8)',
-                  backdropFilter: 'blur(10px)',
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
-                  border: '1px solid rgba(168, 85, 247, 0.2)',
-                  cursor: 'pointer'
-                }}
-                onClick={() => setSelectedProject(project)}
-              >
-                <Row style={{ margin: 0, flexDirection: index % 2 === 1 ? 'row-reverse' : 'row' }}>
-                  <Col md={6} style={{ padding: 0 }}>
-                    <div style={{ position: 'relative', overflow: 'hidden', height: '100%', minHeight: '400px' }}>
-                      <motion.img
-                        src={project.imgUrl}
-                        alt={project.title}
-                        style={{
-                          width: '100%',
-                          height: '400px',
-                          objectFit: 'cover',
-                          transition: 'transform 0.5s ease'
-                        }}
-                        whileHover={{ scale: 1.05 }}
-                      />
-                      <div style={{
-                        position: 'absolute',
-                        top: '20px',
-                        right: '20px',
-                        background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
-                        padding: '5px 15px',
-                        borderRadius: '50px',
-                        fontSize: '0.8rem',
-                        fontWeight: 'bold',
-                        color: 'white'
-                      }}>
-                        {project.category === 'fullstack' ? 'Full Stack' : 'IoT & Embedded'}
-                      </div>
-                      {project.client && (
+          {/* Projects Grid - All Full Width */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+          >
+            {projects.map((project, index) => (
+              <div key={project.id} style={{ marginBottom: '60px' }}>
+                <motion.div
+                  variants={cardVariants}
+                  whileHover="hover"
+                  style={{
+                    background: 'rgba(30, 30, 50, 0.8)',
+                    backdropFilter: 'blur(10px)',
+                    borderRadius: '20px',
+                    overflow: 'hidden',
+                    boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)',
+                    border: '1px solid rgba(168, 85, 247, 0.2)',
+                    cursor: 'pointer'
+                  }}
+                  onClick={() => setSelectedProject(project)}
+                >
+                  <Row style={{ margin: 0, flexDirection: index % 2 === 1 ? 'row-reverse' : 'row' }}>
+                    <Col md={6} style={{ padding: 0 }}>
+                      <div style={{ position: 'relative', overflow: 'hidden', height: '100%', minHeight: '400px' }}>
+                        <Image
+                          src={project.imgUrl}
+                          alt={project.title}
+                          fill
+                          style={{ objectFit: 'cover' }}
+                        />
                         <div style={{
                           position: 'absolute',
-                          bottom: '20px',
-                          left: '20px',
-                          background: 'rgba(168, 85, 247, 0.9)',
-                          backdropFilter: 'blur(5px)',
+                          top: '20px',
+                          right: '20px',
+                          background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
                           padding: '5px 15px',
                           borderRadius: '50px',
                           fontSize: '0.8rem',
                           fontWeight: 'bold',
                           color: 'white'
                         }}>
-                          Client: {project.client}
+                          {project.category === 'fullstack' ? 'Full Stack' : 'IoT & Embedded'}
                         </div>
-                      )}
-                    </div>
-                  </Col>
-                  <Col md={6} style={{ padding: '40px' }}>
-                    <h3 style={{
-                      fontSize: '1.8rem',
-                      fontWeight: 'bold',
-                      marginBottom: '15px',
-                      color: '#f3e8ff'
-                    }}>
-                      {project.title}
-                    </h3>
-                    <p style={{
-                      color: '#c4b5fd',
-                      marginBottom: '20px',
-                      lineHeight: '1.6',
-                      fontSize: '1rem'
-                    }}>
-                      {project.shortDesc}
-                    </p>
-                    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '25px' }}>
-                      {project.technologies.map((tech, idx) => (
-                        <span key={idx} style={{
-                          background: 'rgba(168, 85, 247, 0.2)',
-                          padding: '6px 15px',
-                          borderRadius: '50px',
-                          fontSize: '0.8rem',
-                          color: '#c4b5fd'
-                        }}>
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                    <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
-                      <Button
-                        style={{
-                          background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
-                          border: 'none',
-                          padding: '12px 30px',
-                          borderRadius: '50px',
-                          fontWeight: '600',
-                          display: 'flex',
-                          alignItems: 'center',
-                          gap: '8px'
-                        }}
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          setSelectedProject(project);
-                        }}
-                      >
-                        View Details <MdArrowForward />
-                      </Button>
-                      {/* {project.github && typeof project.github === 'object' ? (
+                        {project.client && (
+                          <div style={{
+                            position: 'absolute',
+                            bottom: '20px',
+                            left: '20px',
+                            background: 'rgba(168, 85, 247, 0.9)',
+                            backdropFilter: 'blur(5px)',
+                            padding: '5px 15px',
+                            borderRadius: '50px',
+                            fontSize: '0.8rem',
+                            fontWeight: 'bold',
+                            color: 'white'
+                          }}>
+                            Client: {project.client}
+                          </div>
+                        )}
+                      </div>
+                    </Col>
+                    <Col md={6} style={{ padding: '40px' }}>
+                      <h3 style={{
+                        fontSize: '1.8rem',
+                        fontWeight: 'bold',
+                        marginBottom: '15px',
+                        color: '#f3e8ff'
+                      }}>
+                        {project.title}
+                      </h3>
+                      <p style={{
+                        color: '#c4b5fd',
+                        marginBottom: '20px',
+                        lineHeight: '1.6',
+                        fontSize: '1rem'
+                      }}>
+                        {project.shortDesc}
+                      </p>
+                      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap', marginBottom: '25px' }}>
+                        {project.technologies.map((tech, idx) => (
+                          <span key={idx} style={{
+                            background: 'rgba(168, 85, 247, 0.2)',
+                            padding: '6px 15px',
+                            borderRadius: '50px',
+                            fontSize: '0.8rem',
+                            color: '#c4b5fd'
+                          }}>
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
+                      <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap' }}>
+                        <Button
+                          style={{
+                            background: 'linear-gradient(135deg, #a855f7, #7c3aed)',
+                            border: 'none',
+                            padding: '12px 30px',
+                            borderRadius: '50px',
+                            fontWeight: '600',
+                            display: 'flex',
+                            alignItems: 'center',
+                            gap: '8px'
+                          }}
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setSelectedProject(project);
+                          }}
+                        >
+                          View Details <MdArrowForward />
+                        </Button>
+                        {/* {project.github && typeof project.github === 'object' ? (
                         <Button
                           href={project.github.frontend}
                           target="_blank"
@@ -354,13 +351,13 @@ Key Contributions:
                           </Button>
                         )
                       )} */}
-                    </div>
-                  </Col>
-                </Row>
-              </motion.div>
-            </div>
-          ))}
-        </motion.div>
+                      </div>
+                    </Col>
+                  </Row>
+                </motion.div>
+              </div>
+            ))}
+          </motion.div>
         </section>
       </Container>
 
@@ -425,16 +422,17 @@ Key Contributions:
                 <MdClose size={24} color="white" />
               </Button>
 
-              <img
-                src={selectedProject.imgUrl}
-                alt={selectedProject.title}
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  borderRadius: '30px 30px 0 0'
-                }}
-              />
+              <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+                <Image
+                  src={selectedProject.imgUrl}
+                  alt={selectedProject.title}
+                  fill
+                  style={{
+                    objectFit: 'contain',
+                    borderRadius: '30px 30px 0 0'
+                  }}
+                />
+              </div>
 
               <div style={{ padding: '40px' }}>
                 <h2 style={{

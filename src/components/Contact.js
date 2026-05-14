@@ -1,9 +1,10 @@
+'use client'
 import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import contactImg from "../assets/img/contact-img.svg";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import contact from "../assets/img/contact.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {

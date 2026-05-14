@@ -1,3 +1,4 @@
+'use client'
 import { Col } from "react-bootstrap";
 import ButtonInCard from "./Button";
 

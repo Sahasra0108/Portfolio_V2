@@ -1,5 +1,6 @@
+'use client'
 import React from 'react';
-
+import Image from "next/image";
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import img1 from '../assets/img/experience1.jpeg';
 import img2 from '../assets/img/experience2.jpeg';
@@ -41,10 +42,10 @@ export const Experience = () => {
 
                     {/* Scattered Images */}
                     <div className="image-collage">
-                        <img src={img1} className="photo p1" alt="Image1" />
-                        <img src={img2} className="photo p2" alt="Image2"/>
-                        <img src={img3} className="photo p3" alt="Image3" />
-                        <img src={img4} className="photo p4" alt="Image3" />
+                        <Image src={img1} className="photo p1" alt="Image1" />
+                        <Image src={img2} className="photo p2" alt="Image2"/>
+                        <Image src={img3} className="photo p3" alt="Image3" />
+                        <Image src={img4} className="photo p4" alt="Image3" />
                         
                     </div>
                 </section>

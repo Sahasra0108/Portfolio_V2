@@ -1,9 +1,10 @@
+'use client'
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-
+import Image from "next/image";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
-import sachiniImg from "../assets/img/ID.png";
+import sachiniImg from "../assets/img/ID_Card.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -37,7 +38,7 @@ export const About = () => {
                 data-aos-duration="2500"
               >
                 <div className="id-card-inner">
-                <img src={sachiniImg} alt="mockup" className="img-fluid badge-img swing-in-element" />
+                <Image src={sachiniImg} alt="mockup" className="img-fluid badge-img swing-in-element" />
                 </div>
               </div>
             </Col>

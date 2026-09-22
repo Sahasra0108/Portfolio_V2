@@ -82,14 +82,12 @@ export const Banner = () => {
           )}
         </TrackVisibility>
 
-        {/* ✅ Spline loads after 2 seconds */}
         <div style={{
           width: "100%",
           height: "600px",
           position: "relative"
         }}>
           {showSpline ? (
-            // ✅ Show actual Spline
             <spline-viewer
               url="https://prod.spline.design/23OwDtGUhdCNwFS9/scene.splinecode"
               style={{ width: "100%", height: "100%", display: "block" }}

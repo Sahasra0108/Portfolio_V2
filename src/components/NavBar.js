@@ -51,7 +51,7 @@ export const NavBar = () => {
             <a href="#connect">
               <button className="vvd"><span>Hire Me</span></button>
             </a>
-            <a href="/Sachini_Sahasra_Software_Engineer.pdf" target="_blank" rel="noopener noreferrer">
+            <a href="/Sachini_Sahasra_Full_Stack_Developer_CV.pdf" target="_blank" rel="noopener noreferrer">
               <button className="vvd"><span>Get CV</span></button>
             </a>
           </span>

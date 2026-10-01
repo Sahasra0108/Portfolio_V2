@@ -105,7 +105,7 @@ export const Banner = () => {
 
           <div className="hero-col hero-about">
             <h2>Software &amp; AI Engineer </h2>
-            <p>IT graduate from the University of Moratuwa, building full-stack products and the AI features inside them.</p>
+            <p>IT graduate from the University of Moratuwa, passionate about full-stack development and AI engineering.</p>
             <div className="hero-actions">
               <a className="hero-cta" href="#connect">Hire me</a>
               <a className="hero-link" href="#projects">See my work</a>

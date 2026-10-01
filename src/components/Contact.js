@@ -109,7 +109,7 @@ useEffect(() => {
                     </p>
                     <p className="detailsp">
                       <FontAwesomeIcon icon={faMapMarkerAlt} className="icon" />
-                      <strong>Address :</strong>Bandaragama,Sri Lanka
+                      <strong>Address :</strong> Colombo, Sri Lanka
                     </p>
 
                     <a

@@ -45,7 +45,8 @@ export const Education = () => {
                       <p className="light-text">
                         University of Moratuwa
                       </p>
-                      <p>2022-Present</p>
+                      <p>2022-2026</p>
+                      <p >Second Class (Upper Division)</p>
                     </li>
                     <li className="timeline-item mb-5">
                       <span className="timeline-icon">

@@ -20,10 +20,11 @@ export const About = () => {
               <div className="w-100 ">
                 <div className="text-gray-500 sm-text-lg dark:text-gray-400">
                   <p className="mb-4 text-justify">
-                    I’m Sachini, an undergraduate in Information Technology at the University of Moratuwa, with a strong interest in Full-Stack Development and UI/UX Design. My goal is to stay at the forefront of technological advancements while continuously enhancing my skills in software development, web technologies, and user-centered design.
+                     I’m Sachini, a Full Stack Developer and a recent graduate in Information Technology from the University of Moratuwa. I build and ship web applications end to end, working across Java and Spring Boot, Python, React, Next.js, and modern databases.
                   </p>
                   <p className="mb-4 text-justify">
-                   I enjoy tackling challenges that drive continuous learning and growth, especially in fast-evolving environments. I am passionate about building complete digital solutions by combining intuitive UI/UX design with efficient, scalable full-stack development to create applications that are both functional and user-friendly. With strong collaboration and communication skills, I work effectively in teams to achieve shared goals while staying up to date with emerging technologies, tools, and design trends to continuously grow as a developer and designer.
+                  I’m particularly interested in building practical software that combines solid engineering with intelligent features. My experience includes developing full-stack applications, REST APIs, AI-powered features using LLM APIs and function calling, and machine learning solutions. I also enjoy contributing to open-source projects and exploring new technologies through hands-on projects.
+                  I’m driven by curiosity, continuous learning, and the challenge of turning ideas into reliable, user-friendly digital products.
                   </p>
                 </div>
                 <div className="d-flex flex-column align-items-center justify-content-center">
@@ -51,3 +52,5 @@ export const About = () => {
   );
 
 };
+
+

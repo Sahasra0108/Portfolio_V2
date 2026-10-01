@@ -6,6 +6,8 @@ import projImg1 from "../assets/img/centralsync.jpeg";
 import projImg4 from "../assets/img/project1.jpg";
 import projImg2 from "../assets/img/Pathwise.jpeg";
 import projImg3 from "../assets/img/research.jpeg";
+import projImg5 from "../assets/img/Bike_price_predictor.png";
+import projImg6 from "../assets/img/Reportly.jpeg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import AOS from 'aos';
@@ -66,28 +68,72 @@ Features:
       technologies: ["Next.js", "Spring Boot", "MySQL", "AI/ML", "Tailwind CSS"],
       category: "fullstack"
     },
+
     {
       id: 3,
-      title: "Morphologically Similar Ayurvedic Plant Identification and Health Assessment ",
-      shortDesc: "Research-based mobile app for Ayurvedic plant identification",
-      description: `A research-based mobile application designed to automate the identification and health assessment of morphologically similar Ayurvedic medicinal plants in Sri Lanka using machine vision.
+      title: "Morphologically Similar Ayurvedic Plant Identification & Health Assessment",
+      shortDesc: "ML-powered mobile application for identifying similar medicinal plants and assessing leaf health",
+      description: `A research-based mobile application developed in collaboration with Gampaha Wickramarachchi Ayurveda Hospital to identify morphologically similar Ayurvedic medicinal plants and assess leaf health using machine learning.
 
 Key Contributions:
-• Developed a framework to resolve morphological overlap in similar Ayurvedic plants using single-leaf image recognition
-• Designed a system to assess leaf freshness and health based on moisture, fungal damage, and degradation
-• Implemented machine learning models for accurate plant classification
-• Created a mobile interface for field data collection and analysis`,
+• Developed a single-leaf classification pipeline for 14 medicinal plant species using handcrafted botanical and image features, achieving 96.89% test accuracy.
+• Outperformed a MobileNetV2 deep learning baseline (94.67%) using a traditional machine learning approach.
+• Built a two-stage leaf health assessment pipeline using XGBoost classification and SVR regression, achieving 95.71% classification accuracy.
+• Implemented an interpretable damage assessment system with feature-level breakdowns.
+• Developed FastAPI backend services to integrate both ML pipelines with a Flutter mobile application.
+• Applied leakage-safe evaluation and cross-platform model serialization for reliable deployment.`,
       imgUrl: projImg3,
-      // github: {
-      //   frontend: "https://github.com/ashanmwick/ayurvedic-plant-id",
-      //   backend: "https://github.com/ashanmwick/ayurvedic-plant-api"
-      // },
+      github: "https://github.com/6614Kavya/ayurveda-recognition.git",
       live: "https://ayurvedic-plant-demo.com",
-      technologies: ["Python", "OpenCV", "Flutter", "FastAPI"],
-      category: "fullstack"
+      technologies: ["Python", "OpenCV", "Scikit-learn", "XGBoost", "FastAPI", "Flutter"],
+      category: "research"
     },
+
     {
       id: 4,
+      title: "Sri Lanka Used Bike Price Predictor",
+      shortDesc: "ML-powered web application for predicting used motorcycle prices in Sri Lanka",
+      description: `A full-stack machine learning application that predicts the market prices of used motorcycles in Sri Lanka based on factors such as brand, model, manufacturing year, mileage, and engine capacity.
+
+Key Contributions:
+• Developed a CatBoost regression model to predict used motorcycle prices, achieving an R² score of 0.9560.
+• Built a Flask REST API to serve real-time predictions from the trained machine learning model.
+• Integrated SHAP-based explainability to visualize feature contributions and help users understand the factors influencing predicted prices.
+• Developed a responsive Next.js frontend for entering motorcycle details and viewing price predictions.
+• Containerized application services using Docker for consistent deployment.
+• Automated testing and Docker image builds using GitHub Actions CI/CD pipelines.`,
+      imgUrl: projImg5,
+      github: "https://github.com/Sahasra0108/Motorcycle-Price-Prediction-SL.git",
+      live: "YOUR_LIVE_DEMO_URL",
+      technologies: ["Next.js", "Python", "Flask", "CatBoost", "SHAP", "Docker", "GitHub Actions"],
+      category: "ai"
+    },
+
+    {
+      id: 5,
+      title: "Reportly - AI-Powered Report Workflow Platform",
+      shortDesc: "Full-stack reporting platform with multi-stage reviews, version history, and an AI assistant",
+      description: `A full-stack web application designed to streamline weekly report submissions, reviews, and approvals through a structured workflow with role-based access control, version history, and an AI-powered assistant.
+
+Key Contributions:
+• Developed REST APIs for authentication, role-based access control, and dashboard data aggregation using FastAPI and MySQL.
+• Implemented a multi-stage reporting workflow supporting Draft, Submitted, Approved, and Needs Correction states.
+• Built report versioning to preserve submission history and enable recovery of previous versions.
+• Developed a management dashboard for tracking reports and review progress across different user roles.
+• Integrated a Gemini-powered AI assistant with function calling to interact with role-restricted backend tools.
+• Implemented 30 automated pytest tests to validate API functionality, authentication, permissions, and workflow behavior.
+• Containerized the application using Docker for consistent deployment.
+
+`,
+      imgUrl: projImg6,
+      github: "https://github.com/Sahasra0108/weekly-report-generator.git",
+      live: "YOUR_LIVE_DEMO_URL",
+      technologies: ["FastAPI", "Python", "Next.js", "TypeScript", "MySQL", "Gemini API", "Docker", "pytest"],
+      category: "fullstack"
+    },
+
+    {
+      id: 6,
       title: "Velosense - Advanced Bicycle Ride Tracking and Analysis System",
       shortDesc: "IoT-based cycling performance tracking system",
       description: `A system designed for both professional cyclists and daily exercisers, enabling them to track and analyze crucial performance metrics during their cycling journeys.
@@ -241,7 +287,7 @@ Key Contributions:
                           fontWeight: 'bold',
                           color: 'white'
                         }}>
-                          {project.category === 'fullstack' ? 'Full Stack' : 'IoT & Embedded'}
+                          {project.category === 'fullstack' ? 'Full Stack' : 'research' ? 'Research' : 'IoT & Embedded'}
                         </div>
                         {project.client && (
                           <div style={{

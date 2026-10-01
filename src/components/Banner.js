@@ -4,9 +4,7 @@ import { FaLaptopCode } from "react-icons/fa6";
 import { IoIosGitMerge } from "react-icons/io";
 import { RiRobot3Line } from "react-icons/ri";
 import { Space_Grotesk } from "next/font/google";
-import { PiHandWavingBold } from "react-icons/pi";
  
-
 const nameFont = Space_Grotesk({ subsets: ["latin"], weight: ["700"], display: "swap" });
 
 
@@ -43,7 +41,6 @@ export const Banner = () => {
     setShowBubble(t > 1.0 && t < 4.0);
   };
 
-  // Users who turn off animations see the still poster instead
   useEffect(() => {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches && videoRef.current) {
       videoRef.current.pause();
@@ -51,7 +48,6 @@ export const Banner = () => {
     }
   }, []);
 
-  // Wave again on hover (desktop) or tap (mobile)
   const replayWave = () => {
     const v = videoRef.current;
     if (!v) return;
@@ -68,7 +64,6 @@ export const Banner = () => {
         </header>
 
         <div className="hero-grid">
-          {/* Left: what I do */}
           <div className="hero-col hero-services">
             <h2>What I do</h2>
             {SERVICES.map((s) => (
@@ -84,7 +79,6 @@ export const Banner = () => {
             ))}
           </div>
 
-          {/* Center: waving avatar */}
           <div className="hero-photo">
             <div className="hero-avatar-wrap">
               <div className="hero-avatar">
@@ -109,7 +103,6 @@ export const Banner = () => {
             </div>
           </div>
 
-          {/* Right: intro + CTA + facts */}
           <div className="hero-col hero-about">
             <h2>Software &amp; AI Engineer </h2>
             <p>IT graduate from the University of Moratuwa, building full-stack products and the AI features inside them.</p>

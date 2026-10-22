@@ -64,7 +64,7 @@ Technologies: React Native (Expo), Expo Router, Firebase, Context API, Axios.
 
 `,
       imgUrl: projImg7,
-      github: "https://github.com/6614Kavya/ayurveda-recognition.git",
+      github: "https://github.com/Sahasra0108/Book_Bridge.git",
       technologies: ["React Native", "Expo", "Expo Router", "Firebase", "Context API", "Axios"],
       category: "mobile"
     },

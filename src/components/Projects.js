@@ -8,6 +8,7 @@ import projImg2 from "../assets/img/Pathwise.jpeg";
 import projImg3 from "../assets/img/research.jpeg";
 import projImg5 from "../assets/img/Bike_price_predictor.png";
 import projImg6 from "../assets/img/Reportly.jpeg";
+import projImg7 from "../assets/img/bookbridge.jpeg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import AOS from 'aos';
@@ -49,6 +50,26 @@ Client: Rootcode Labs`,
     },
     {
       id: 2,
+      title: "BookBridge - React Native Study App",
+      shortDesc: "Cross-platform mobile application for book recommendations",
+      description: `A cross-platform mobile application designed to help users discover and explore books through personalised recommendations, with a seamless onboarding and authentication experience.
+
+Key Contributions:
+• Authentication: Implemented Firebase sign-up and sign-in functionality with comprehensive form validation.
+• Navigation: Integrated Expo Router for seamless navigation across application screens.
+• User Interface: Developed reusable components, personalised home screens, and light/dark theme support.
+• Book Discovery: Integrated the Google Books REST API using Axios to fetch and display book information.
+
+Technologies: React Native (Expo), Expo Router, Firebase, Context API, Axios.
+
+`,
+      imgUrl: projImg7,
+      github: "https://github.com/6614Kavya/ayurveda-recognition.git",
+      technologies: ["React Native", "Expo", "Expo Router", "Firebase", "Context API", "Axios"],
+      category: "mobile"
+    },
+    {
+      id: 3,
       title: "Pathwise – AI-Powered Career Coaching Platform",
       shortDesc: "AI-powered career coaching platform for job seekers",
       description: `A web application that helps job seekers identify ideal career paths, analyze skill gaps, and prepare for interviews. The app provides personalized job recommendations, resume optimization, and interactive tools like an AI Interview Coach to support professional growth.
@@ -66,11 +87,11 @@ Features:
       },
       live: "https://pathwise-demo.com",
       technologies: ["Next.js", "Spring Boot", "MySQL", "AI/ML", "Tailwind CSS"],
-      category: "fullstack"
+      category: ["fullstack", "mobile"],
     },
 
     {
-      id: 3,
+      id: 4,
       title: "Morphologically Similar Ayurvedic Plant Identification & Health Assessment",
       shortDesc: "ML-powered mobile application for identifying similar medicinal plants and assessing leaf health",
       description: `A research-based mobile application developed in collaboration with Gampaha Wickramarachchi Ayurveda Hospital to identify morphologically similar Ayurvedic medicinal plants and assess leaf health using machine learning.
@@ -90,7 +111,7 @@ Key Contributions:
     },
 
     {
-      id: 4,
+      id: 5,
       title: "Sri Lanka Used Bike Price Predictor",
       shortDesc: "ML-powered web application for predicting used motorcycle prices in Sri Lanka",
       description: `A full-stack machine learning application that predicts the market prices of used motorcycles in Sri Lanka based on factors such as brand, model, manufacturing year, mileage, and engine capacity.
@@ -110,7 +131,7 @@ Key Contributions:
     },
 
     {
-      id: 5,
+      id: 6,
       title: "Reportly - AI-Powered Report Workflow Platform",
       shortDesc: "Full-stack reporting platform with multi-stage reviews, version history, and an AI assistant",
       description: `A full-stack web application designed to streamline weekly report submissions, reviews, and approvals through a structured workflow with role-based access control, version history, and an AI-powered assistant.
@@ -133,7 +154,7 @@ Key Contributions:
     },
 
     {
-      id: 6,
+      id: 7,
       title: "Velosense - Advanced Bicycle Ride Tracking and Analysis System",
       shortDesc: "IoT-based cycling performance tracking system",
       description: `A system designed for both professional cyclists and daily exercisers, enabling them to track and analyze crucial performance metrics during their cycling journeys.
@@ -287,7 +308,15 @@ Key Contributions:
                           fontWeight: 'bold',
                           color: 'white'
                         }}>
-                          {project.category === 'fullstack' ? 'Full Stack' : 'research' ? 'Research' : 'IoT & Embedded'}
+                          {
+                            project.category === 'fullstack'
+                              ? 'Full Stack'
+                              : project.category === 'research'
+                                ? 'Research'
+                                : project.category === 'mobile'
+                                  ? 'Mobile'
+                                  : 'IoT & Embedded'
+                          }
                         </div>
                         {project.client && (
                           <div style={{

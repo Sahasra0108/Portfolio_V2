@@ -10,8 +10,8 @@ const nameFont = Space_Grotesk({ subsets: ["latin"], weight: ["700"], display: "
 
 const SERVICES = [
   {
-    title: "Full-stack development",
-    text: "Crafting modern, scalable web experiences.",
+    title: "Full-stack & mobile development",
+    text: "Crafting modern, scalable web and mobile experiences.",
     icon: FaLaptopCode,
   },
   {
@@ -104,8 +104,8 @@ export const Banner = () => {
           </div>
 
           <div className="hero-col hero-about">
-            <h2>Software &amp; AI Engineer </h2>
-            <p>IT graduate from the University of Moratuwa, passionate about full-stack development and AI engineering.</p>
+             <h2>Software Engineer<br/>Full-Stack &amp; Mobile</h2>
+            <p>IT graduate from the University of Moratuwa, passionate about building full-stack web and mobile applications, with hands-on experience integrating AI into real products.</p>
             <div className="hero-actions">
               <a className="hero-cta" href="#connect">Hire me</a>
               <a className="hero-link" href="#projects">See my work</a>

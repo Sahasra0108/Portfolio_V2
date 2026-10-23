@@ -87,7 +87,7 @@ Features:
       },
       live: "https://pathwise-demo.com",
       technologies: ["Next.js", "Spring Boot", "MySQL", "AI/ML", "Tailwind CSS"],
-      category: ["fullstack", "mobile"],
+      category: ["fullstack"],
     },
 
     {
@@ -127,7 +127,7 @@ Key Contributions:
       github: "https://github.com/Sahasra0108/Motorcycle-Price-Prediction-SL.git",
       live: "YOUR_LIVE_DEMO_URL",
       technologies: ["Next.js", "Python", "Flask", "CatBoost", "SHAP", "Docker", "GitHub Actions"],
-      category: "ai"
+      category: "fullstack"
     },
 
     {

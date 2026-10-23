@@ -87,7 +87,7 @@ Features:
       },
       live: "https://pathwise-demo.com",
       technologies: ["Next.js", "Spring Boot", "MySQL", "AI/ML", "Tailwind CSS"],
-      category: ["fullstack"],
+      category: "fullstack",
     },
 
     {
